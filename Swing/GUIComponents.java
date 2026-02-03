@@ -7,7 +7,6 @@ public class GUIComponents {
     GUIComponents() {
         JFrame frame = new JFrame("GUI Components Example");
         frame.setSize(500, 500);
-        frame.setVisible(true);
 
         frame.setLayout(new FlowLayout());
         JLabel l1 = new JLabel("User name:");
@@ -26,7 +25,7 @@ public class GUIComponents {
         bg2.add(r2);
 
         String languages[] = { "Java", "Python", "C++", "JavaScript" };
-        JComboBox cb1 = new JComboBox<>(languages);
+        JComboBox<String> cb1 = new JComboBox<>(languages);
 
         // l1.setBounds(20, 50, 100, 20);
         // t1.setBounds(120, 50, 100, 30);
@@ -40,8 +39,6 @@ public class GUIComponents {
         frame.add(cb1);
 
         frame.setVisible(true);
-
-        frame.requestFocus();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
